@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyễn Đình Sơn Tùng</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="images.jpg" type="image/png">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="cyber-grid"></div>
+    <div class="bg-particles"></div>
+
+    <div id="hacker-intro">
+        <div id="click-to-enter" onclick="startHackerIntro()">
+            <div class="enter-box">
+                CLICK TO ENTER<br>
+                <span style="font-size: 14px; letter-spacing: 5px;">Click Here</span>
+            </div>
+        </div>
+        <div id="terminal-screen" style="display: none;">
+            <div id="terminal-text"></div>
+        </div>
+    </div>
+
+    <div id="boot-screen">
+        <div class="scan-line"></div>
+        <div class="loader-ring">
+            <div class="loading-percent" id="load-text">0%</div>
+        </div>
+        <div class="system-logs" id="sys-logs">
+            [SYS] Attempting handshake...<br>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div class="grid-container">
+            
+            <div class="glass-card profile-section">
+                <div class="avatar-container">
+                    <div class="avatar-ring"></div>
+                    <img src="images.jpg" alt="Avatar" class="avatar-img">
+                    <div class="verified-badge"><i class="fa-solid fa-check"></i></div>
+                </div>
+                
+                <h1 class="user-name">Nguyễn Đình Sơn Tùng</h1>
+                <div class="user-tag"><i class="fa-solid fa-terminal"></i> Hkaniss_</div>
+                
+                <p style="color: var(--text-dim); margin-bottom: 25px; font-size: 15px;">
+                    Creative Developer & Community Leader.<br>Navigating the digital realm.
+                </p>
+
+                <div class="social-links">
+                    <a href="https://www.tiktok.com/@hkaniss_" target="_blank" class="link-btn">
+                        <div class="link-content">
+                            <i class="fa-brands fa-tiktok link-icon"></i>
+                            <span>TikTok Profile</span>
+                        </div>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="https://discord.gg/ZfFEycm95Z" target="_blank" class="link-btn">
+                        <div class="link-content">
+                            <i class="fa-brands fa-discord link-icon"></i>
+                            <span>Discord Base</span>
+                        </div>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@Hkaniss" target="_blank" class="link-btn">
+                        <div class="link-content">
+                            <i class="fa-brands fa-youtube link-icon"></i>
+                            <span>Youtube</span>
+                        </div>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="widget-wrapper">
+                
+                <div class="glass-card" style="padding: 25px;">
+                    <h2 class="section-title"><i class="fa-solid fa-wave-square"></i> Audio Link</h2>
+                    <div class="music-box">
+                        <div class="disc-wrapper">
+                            <img src="tuyenbangai.jpg" id="music-logo" class="music-avatar" alt="Nhạc đang phát">
+                        </div>
+                        <div class="music-info">
+                            <div class="m-title" id="m-title">Tuyển Bạn Gái</div>
+                            <div class="m-status" id="m-status">Awaiting playback...</div>
+                            
+                            <div class="m-controls">
+                                <button id="m-prev"><i class="fa-solid fa-backward-step"></i></button>
+                                <button class="play-btn" id="m-play"><i class="fa-solid fa-play" id="play-icon"></i></button>
+                                <button id="m-next"><i class="fa-solid fa-forward-step"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="volume-control">
+                        <i class="fa-solid fa-volume-high volume-icon"></i>
+                        <input type="range" id="volume-slider" min="0" max="1" step="0.05" value="0.5">
+                    </div>
+
+                    <audio id="audio-player" src="track1.mp3"></audio>
+                </div>
+
+                <div class="glass-card" style="padding: 25px;">
+                    <h2 class="section-title"><i class="fa-solid fa-shield-halved"></i> Gửi Tin Nhắn Hỗ Trợ</h2>
+                    <form id="webhook-form">
+                        <input type="text" id="w-name" class="cyber-input" placeholder=">> Username Discord" required>
+                        <textarea id="w-msg" class="cyber-input" placeholder=">> Vấn đề cần hỗ trợ....." required></textarea>
+                        <button type="submit" class="cyber-submit" id="w-btn">
+                            <i class="fa-solid fa-paper-plane"></i> Send
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="full-span footer">
+                HKANISS PROTOCOL v2.0 // EST. 2026 // SECURE CONNECTION
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
